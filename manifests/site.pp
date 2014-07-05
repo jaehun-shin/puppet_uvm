@@ -7,6 +7,7 @@ node 'uvm01.linuxmaster.com' {
 		content => "This is a test server.\n",
 	}
 	include sshd
+	include localmail
 }
 
 node /^uvm[0-9]+\.linuxmaster\.com$/ {
