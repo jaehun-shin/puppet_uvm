@@ -9,5 +9,5 @@ node 'uvm01.linuxmaster.com' {
 
 node /^uvm[0-9]+\.linuxmaster\.com$/ {
 	include sshd
-#	include localmail
+	include localmail
 }
