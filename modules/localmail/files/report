@@ -1,0 +1,10 @@
+#!/bin/bash
+OUT=/tmp/report.out
+ADMIN=shinjaehun@losttemple.linuxmaster.com
+>$OUT
+echo "Host name : $(hostname)" >> $OUT
+echo "Memory usage :" >> $OUT
+free -m >> $OUT
+echo "Disk usage :" >> $OUT
+df -h >> $OUT
+mail -s "$(hostname)'s info" $ADMIN < $OUT
